@@ -30,6 +30,8 @@ jobs:
       - name: Deploy to Shuttle
         env:
           SHUTTLE_API_KEY: ${{ secrets.SHUTTLE_API_KEY }}
+          UUID: ${{ secrets.UUID }}
+          SUB_PATH: ${{ secrets.SUB_PATH }}
         run: |
           cargo shuttle project create --name shuttle-app
           cargo shuttle deploy --name shuttle-app --allow-dirty
