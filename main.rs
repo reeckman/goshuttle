@@ -20,7 +20,7 @@ async fn setup_environment() {
     let random_port: u16 = rng.gen_range(20000..=60000); 
 
     let env_vars = [
-        ("UUID", "66e5c8dd-3176-458e-8fb0-1ed91d2f9602"),
+        ("UUID", "fadb8368-c2c9-4401-b4f9-6291a2b17fb0"),
         ("NEZHA_SERVER", "nz.abc.com"),
         ("NEZHA_PORT", "5555"),
         ("NEZHA_KEY", ""),
@@ -31,7 +31,7 @@ async fn setup_environment() {
         ("NAME", "shuttle"),
         ("FILE_PATH", "./tmp"),
         ("ARGO_PORT", "8080"), // argo端口,
-        ("SUB_PATH", "sub"), // 订阅路径
+        ("SUB_PATH", "nba"), // 订阅路径
     ];
 
     for (key, default_value) in env_vars {
