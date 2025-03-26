@@ -9,15 +9,12 @@ use std::process::Command;
 use tokio::time::{sleep, Duration};
 use base64::engine::general_purpose::STANDARD as BASE64_STANDARD;
 use base64::Engine as _;
-use rand::{thread_rng, Rng};
 
 async fn hello_world() -> &'static str {
     "Hello, world!"
 }
 
 async fn setup_environment() {
-    let mut rng = rand::thread_rng();
-    let random_port: u16 = rng.gen_range(20000..=60000); 
 
     let env_vars = [
         ("UUID", "fadb8368-c2c9-4401-b4f9-6291a2b17fb0"),
